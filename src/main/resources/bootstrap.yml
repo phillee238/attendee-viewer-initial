@@ -5,5 +5,4 @@ spring:
     name: attendee-viewer
   cloud:
     config:
-      uri: ${vcap.services.config-server-uri.credentials.uri}   
-    
+      uri: ${vcap.services.config-server-uri.credentials.uri}
