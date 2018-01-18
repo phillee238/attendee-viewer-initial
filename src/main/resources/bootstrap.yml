@@ -5,8 +5,13 @@ spring:
     name: attendee-viewer
   cloud:
     config:
-      uri: ${vcap.services.config-server.credentials.uri}   
+      uri: ${vcap.services.config-server-uri.credentials.uri}   
     
 management:
   security:
     enabled: false
+    
+feign:
+  hystrix:
+    enabled: true
+    

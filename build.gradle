@@ -39,6 +39,7 @@ dependencies {
 	compile('org.webjars:font-awesome:4.7.0')
 	compile('org.webjars:webjars-locator')
 	runtime('org.springframework.boot:spring-boot-devtools')
+	runtime('org.springframework.cloud:spring-cloud-starter-hystrix')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
