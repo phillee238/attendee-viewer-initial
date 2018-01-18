@@ -1,6 +1,7 @@
 package io.rscale.training.attendeeviewer;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.PagedResources;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -24,6 +25,11 @@ public class AttendeeController {
     public String attendees(@RequestParam(value="page", required=false, defaultValue= "0") int page, Model model) {
         model.addAttribute("attendees", attendeeClient.getAttendees(page).getContent());
         return "list";
+    }
+    
+    @RequestMapping("/companies")
+    public PagedResources<Company> companies() {
+    	return companyClient.getCompany();
     }
 
     @RequestMapping("/{attendeeId}")

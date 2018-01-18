@@ -7,11 +7,3 @@ spring:
     config:
       uri: ${vcap.services.config-server-uri.credentials.uri}   
     
-management:
-  security:
-    enabled: false
-    
-feign:
-  hystrix:
-    enabled: true
-    
